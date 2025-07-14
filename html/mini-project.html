@@ -46,7 +46,7 @@
 
 <body class="container-fluid" background="../img/netflix-background.jpg"
   style="background-size: cover; background-repeat: no-repeat; background-position: center;">
-  <header>
+  <header><!-- header section containing website logo, Sign in button and language selectiondropdown -->
     <div class="container">
       <img src="../img/netflix.png" alt="Netflix Logo" class="float-start" alt="Image">
       <div class="d-flex justify-content-end">
@@ -62,15 +62,11 @@
           </ul>
         </div>
         <hr>
-        <!-- <select name="options" id="options" class="btn dropdown-toggle">
-            <option value="1" selected>English </option>
-            <option value="2">Hindi</option>
-            <option value="3">Kannada</option>
-        </select> -->
+      
         <button class="btn btn-danger">Sign in</button>
       </div>
   </header>
-  </div><br><br><br>
+  <!--containing Home page titles, email input box to get started with, multiplesections for categories of video streaming, FAQ section etc.-->
   <div class="container-fluid"><br>
     <h1>Unlimited movies, TV shows and more</h1><br>
     <h3>Watch anywhere. Cancel anytime</h3><br>
@@ -81,6 +77,86 @@
       <button id="btn" class="btn btn-danger">Get started ></button>
     </div>
   </div>
+  <!-- Category Sections -->
+<section class="section bg-transparent text-white mb-5 mt-5">
+  <div class="container text-center">
+    <h2 class="mb-5">Browse by Category</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card bg-success text-white h-100" >
+          <div class="card-body">
+            <h5 class="card-title">Action & Adventure</h5>
+            <p class="card-text">High-octane action movies and thrilling adventures.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-success text-white h-100">
+          <div class="card-body">
+            <h5 class="card-title">Romantic</h5>
+            <p class="card-text">Heartwarming love stories and romantic comedies.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-success text-white h-100">
+          <div class="card-body">
+            <h5 class="card-title">Sci-Fi & Fantasy</h5>
+            <p class="card-text">Explore other worlds, time travel, and futuristic tech.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section bg-transparent text-white"  mb-5 mt-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion accordion-flush" id="faqAccordion">
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+            What is Netflix?
+          </button>
+        </h2>
+        <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Netflix is a streaming service that offers a wide variety of content on-demand.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+            Can I cancel anytime?
+          </button>
+        </h2>
+        <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, you can cancel your subscription at any time without any fees.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+            What can I watch on Netflix?
+          </button>
+        </h2>
+        <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You can watch movies, TV shows, documentaries, and more.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- footer Section -->
   <footer class="bg-dark text-white py-4" style="position: absolute; bottom: 0; width: 100%;">
     <div class="container">
       <div class="row">
