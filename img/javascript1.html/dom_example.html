@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function showAlert() {
+    console.log(document.getElementsByTagName('h1')[0].textContent);
+    console.log(document.getElementById('console-message').textContent);
+    console.log(document.querySelector('p').textContent);
+}
+
+</script>
+<body>
+    <h1 id="document-title">Document java script</h1>
+    <button onclick="showAlert()">Click Me</button>
+    <p id="document-paragraph">This is a simple HTML document with JavaScript.</p>
+    <p id="console-message">Check the console for messages.</p>
+
+</body>
+</html>

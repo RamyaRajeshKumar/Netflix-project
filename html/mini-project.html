@@ -40,12 +40,32 @@
       max-width: 500px;
       margin: auto;
     }
+    .flex-item {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .flex-item:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.4);
+      background-color: #212529 !important;
+    }
+    .kids-img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 20px auto;
+      transition: transform 0.3s;
+    }
+
+    .kids-img:hover {
+      transform: scale(1.15) rotate(-6deg);
+    }
   </style>
 </head>
 
 
 <body class="container-fluid" background="../img/netflix-background.jpg"
-  style="background-size: cover; background-repeat: no-repeat; background-position: center;">
+  style="background-size: cover; background-repeat: no-repeat; background-position: center; z-index: 0;">
   <header><!-- header section containing website logo, Sign in button and language selectiondropdown -->
     <div class="container">
       <img src="../img/netflix.png" alt="Netflix Logo" class="float-start" alt="Image">
@@ -110,8 +130,36 @@
   </div>
 </section>
 
+
+<!-- Flexbox Section 1 -->
+<section class="section bg-transparent text-white mb-5 mt-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Watch Anywhere</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-4" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/netflix-background.jpg') center/cover no-repeat; border-radius: 16px; padding: 32px 0;">
+      <div class="flex-item bg-dark text-white p-4 rounded shadow" style="min-width: 250px; max-width: 350px; flex: 1 1 250px;">
+        
+    <img src="../img/netflix-sign-up-screen-on-tv-screen-wall-mounted-2J2YR2C.jpg" alt="Netflix Sign Up" style="width: 80px; height: 80px; object-fit: contain; display: block; margin: 0 auto 14px auto;">
+        <h5>On Your TV</h5>
+        <p>Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+      </div>
+      <div class="flex-item bg-dark text-white p-4 rounded shadow" style="min-width: 250px; max-width: 350px; flex: 1 1 250px;">
+        <img src="../img/asset_mobile_tablet_UI_2.png" alt="Mobile/Tablet UI" style="width: 120px; height: 120px; object-fit: contain; display: block; margin: 0 auto 18px auto;">
+        <h5>On Your Phone or Tablet</h5>
+        <p>Stream unlimited movies and TV shows on your mobile device.</p>
+      </div>
+      <div class="flex-item bg-dark text-white p-4 rounded shadow" style="min-width: 250px; max-width: 350px; flex: 1 1 250px;">
+        <img src="../img/kids.png" alt="Kids Profile" class="kids-img" style="width: 90px; height: 90px; object-fit: contain; display: block; margin: 0 auto 16px auto; transition: transform 0.3s;">
+        <h5>Kids Profile</h5>
+        <p>Let kids enjoy safe, family-friendly entertainment with a dedicated profile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+
 <!-- FAQ Section -->
-<section class="section bg-transparent text-white"  mb-5 mt-5">
+<section class="section bg-transparent text-white mb-5 mt-5" style="margin-bottom: 60px;">
   <div class="container">
     <h2 class="text-center mb-4">Frequently Asked Questions</h2>
     <div class="accordion accordion-flush" id="faqAccordion">
@@ -157,7 +205,7 @@
   </div>
 </section>
 <!-- footer Section -->
-  <footer class="bg-dark text-white py-4" style="position: absolute; bottom: 0; width: 100%;">
+  <footer class="bg-dark text-white py-4">
     <div class="container">
       <div class="row">
         <div class="col-md-3 mb-3">

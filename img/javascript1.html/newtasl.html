@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bank Account Simulation</title>
+</head>
+<body>
+  <script>
+    class BankAccount {
+      constructor(name, customerId, accountOrMobile) {
+        this.name = name;
+        this.customerId = customerId;
+        this.accountOrMobile = accountOrMobile;
+        this.balance = 0;
+        alert(`Welcome ${this.name}! Your bank account has been created.`);
+      }
+
+      deposit(amount) {
+        if (amount <= 0 || isNaN(amount)) {
+          alert("Invalid deposit amount.");
+          return;
+        }
+        this.balance += amount;
+        alert(`₹${amount.toFixed(2)} deposited successfully. Current Balance: ₹${this.balance.toFixed(2)}`);
+      }
+
+      withdraw(amount) {
+        if (amount <= 0 || isNaN(amount)) {
+          alert("Invalid withdrawal amount.");
+          return;
+        }
+        if (amount > this.balance) {
+          alert(`Insufficient funds. Current Balance: ₹${this.balance.toFixed(2)}`);
+        } else {
+          this.balance -= amount;
+          alert(`₹${amount.toFixed(2)} withdrawn successfully. Current Balance: ₹${this.balance.toFixed(2)}`);
+        }
+      }
+
+      checkBalance() {
+        alert(`Current Balance: ₹${this.balance.toFixed(2)}`);
+      }
+    }
+
+    // === Input from User ===
+    const name = prompt("Enter your name:");
+    const customerId = prompt("Enter Customer ID:");
+    const accountOrMobile = prompt("Enter Account Number or Mobile Number:");
+
+    const account = new BankAccount(name, customerId, accountOrMobile);
+
+    // === Menu-driven interaction ===
+    let choice;
+    do {
+      choice = prompt(
+        "Choose an option:\n" +
+        "1. Deposit\n" +
+        "2. Withdraw\n" +
+        "3. Check Balance\n" +
+        "4. Exit"
+      );
+
+      switch (choice) {
+        case '1':
+          const depositAmount = parseFloat(prompt("Enter amount to deposit:"));
+          account.deposit(depositAmount);
+          break;
+        case '2':
+          const withdrawAmount = parseFloat(prompt("Enter amount to withdraw:"));
+          account.withdraw(withdrawAmount);
+          break;
+        case '3':
+          account.checkBalance();
+          break;
+        case '4':
+          alert("Thank you for using our banking service!");
+          break;
+        default:
+          alert("Invalid choice. Please try again.");
+      }
+    } while (choice !== '4');
+  </script>
+</body>
+</html>
